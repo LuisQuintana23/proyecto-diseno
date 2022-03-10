@@ -1,0 +1,43 @@
+.album_foto{
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width:550px){
+    .album_foto{
+        width: 300px;
+    }
+}
+
+.album{
+    margin-top: 100px;
+
+}
+
+section > article{
+    margin-bottom: 100px;
+
+}
+
+.edc{
+    height: 1000px;
+    background: url("../img/edc_lasvegas.jpg") no-repeat;
+    background-size: center;
+}
+
+.ultra{
+    height: 1000px;
+    background: url("../img/ultra_beach_bali.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.summer{
+    height: 1000px;
+    background: url("../img/summer_burst.jpg") no-repeat;
+    background-position: 50% 60%;
+}
+
+.nombre_festival{
+    text-shadow: 2px 2px 10px black;
+}
