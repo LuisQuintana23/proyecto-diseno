@@ -22,5 +22,4 @@ var datos=function(){
     alert("Datos enviados, puede descargar el archivo")
     a.click();
     window.URL.revokeObjectURL(url);
-
 }
