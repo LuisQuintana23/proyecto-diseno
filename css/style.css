@@ -91,10 +91,6 @@ p{font-size:20px;letter-spacing: 1.5px;line-height: 30px;}
         margin-bottom: 0px;
     }
 
-    .logo_link h2{
-        font-size: 40px;
-    }
-
     .presentacion_texto{
         font-size: 14px;
     }
@@ -114,7 +110,7 @@ p{font-size:20px;letter-spacing: 1.5px;line-height: 30px;}
         left: 0;
         top: 60px;
         width: 100%;
-        height: calc(70% - 60px);
+        height: calc(60% - 60px);
         overflow-y: auto;
     }
 

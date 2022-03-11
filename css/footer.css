@@ -1,0 +1,21 @@
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #212529;
+}
+
+.redes_sociales{
+    font-size: 20px;
+}
+
+.derechos{
+    font-size: 11px;
+    color: gray;
+}
+
+.logo_footer{
+    padding: 20px 0px;
+}

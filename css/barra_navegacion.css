@@ -16,3 +16,10 @@ h1, h2{
 }
 
 .logo_link{text-decoration: none;}
+
+
+@media screen and (max-width:768px){
+    .logo_link h2{
+        font-size: 40px;
+    }
+}
