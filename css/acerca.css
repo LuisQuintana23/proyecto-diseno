@@ -46,3 +46,14 @@
 .redes_sociales{
     font-size: 20px;
 }
+
+.video_container{
+    max-width: 800px;
+    width: 80%;
+    height: 550px;
+    background: black;
+}
+
+.video_container:hover{
+
+}
