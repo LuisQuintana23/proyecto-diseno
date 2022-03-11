@@ -21,6 +21,7 @@
 .edc{
     height: 1000px;
     background: url("../img/edc_lasvegas.jpg") no-repeat;
+    background-size: cover;
     background-size: center;
 }
 
@@ -34,6 +35,7 @@
 .summer{
     height: 1000px;
     background: url("../img/summer_burst.jpg") no-repeat;
+    background-size: cover;
     background-position: 50% 60%;
 }
 
