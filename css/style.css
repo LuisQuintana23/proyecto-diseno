@@ -7,12 +7,6 @@
 }
 
 
-@keyframes cambiar_color{
-    0% { background-position: 0 50% }
-    50% { background-position: 100% 50% }
-    100% { background-position: 0 50% }
-}
-
 
 .barra_navegacion{
     display: flex;
@@ -24,15 +18,21 @@
     color:white;
 }
 
-.logo_link{text-decoration: none;}
-
 .enlaces_navbar{display: flex;}
 ul{list-style: none;}
 
 .link_barra{
     text-decoration: none;
     color:white;
-    padding: 0px 10px;
+    padding: 10px;
+    border: 0px solid rgb( 0, 0, 0,0.0);
+}
+
+.link_barra:hover{
+    transition: all 0.3s ease;
+    border: 1px solid white;
+    border-radius: 4px;
+    color: white;
 }
 
 .boton_menu{
@@ -52,21 +52,12 @@ ul{list-style: none;}
     align-items: center;
 }
 
-h1, h2{
-  animation: cambiar_color 10s ease-in-out infinite;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 300%;
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  font-size: 80px;
-}
-
 
 .titulo_zedd{font-size: 80px;}
-p{font-size:20px;letter-spacing: 2.5px;line-height: 30px;}
+p{font-size:20px;letter-spacing: 1.5px;line-height: 30px;}
 
+
+.presentacion{max-width: 800px;}
 
 @media screen and (max-width:1290px){
     .imagen_zedd{width: 700px;}
