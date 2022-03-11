@@ -57,5 +57,11 @@
 }
 
 .opcion{
+    font-size: 125%;
+    padding: 1rem;
+}
 
+#radio{
+    border:#212529;
+    background-color: #212529;
 }
