@@ -59,18 +59,38 @@ p{font-size:20px;letter-spacing: 1.5px;line-height: 30px;}
 
 .presentacion{max-width: 800px;}
 
+
+.btn_conoce_mas{
+    width: 80px;
+    height: 30px;
+    font-size: 22px;
+    text-decoration: none;
+    animation: cambiar_color 10s ease-in-out infinite;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    border: 1px pink solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
 @media screen and (max-width:1290px){
     .imagen_zedd{width: 700px;}
 }
 
 @media screen and (max-width:1100px){
     .imagen_zedd{width: 500px;}
+    footer{margin-top:40px;}
 }
 
 @media screen and (max-width:920px){
     .imagen_zedd{width: 500px;margin:auto; margin-bottom: 20px;}
     .main{grid-template-columns: repeat(1, 1fr);}
     .presentacion{text-align: center;}
+    footer{margin-top:30px;}
 }
 
 
