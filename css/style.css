@@ -53,7 +53,7 @@ ul{list-style: none;}
 }
 
 h1, h2{
-  animation: cambiar_color 30s ease-in-out infinite;
+  animation: cambiar_color 10s ease-in-out infinite;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 300%;
   -webkit-background-clip: text;
@@ -82,40 +82,56 @@ p{font-size:20px;letter-spacing: 2.5px;line-height: 30px;}
     .presentacion{text-align: center;}
 }
 
-@media screen and (max-width:790px){
-    .boton_menu{
-        display: inline-flex;
+
+.boton_barra{
+    color: white;
+    background:none;
+    border:none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+}
+
+@media screen and (max-width:768px){
+    .imagen_zedd{
+        width: 300px;
+        border: #212529;
+        margin-bottom: 0px;
     }
 
-    .enlaces_navbar{
-        position: fixed;
-        flex-direction: column;
-        width: 100vw;
-        height: calc(100% - 100px);
-        background: #212529;
-        top:-100vh;
-        text-align: center;
-        transition: all .4%;
+    .logo_link h2{
+        font-size: 40px;
     }
 
+    .presentacion_texto{
+        font-size: 14px;
+    }
+
+    .titulo_zedd{
+        font-size: 40px;
+    }
     .elemento_barra{
-        margin-top: 30px;
-        line-height: 30px;
+        padding: 20px 20px 20px 0px;
     }
-
-    .elemento_barra:hover{
-        background:none;
-    }
-
     .enlaces_navbar{
-        font-size: 20px;
-        color:white;
+        flex-direction: column;
+        background: #212529;
+        margin-top: 20px;
+        position: fixed;
+        transition: left 0.3s ease;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        height: calc(70% - 60px);
+        overflow-y: auto;
+    }
+
+    .boton_barra{
+        display: block;
+    }
+
+    .barra_menu_visible{
+        left: 100%;
     }
 }
-
-@media screen and (max-width: 858px) and (orientation: landscape){
-    .elemento_barra{margin-top: 5px;}
-    .enlaces_navbar{overflow: scroll;height: calc(100% - 100px);}
-
-}
-    
