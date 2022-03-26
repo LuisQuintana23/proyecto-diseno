@@ -1,0 +1,10 @@
+.btn_accion{
+    padding: 10px 20px;
+    font-size: 10px;
+    margin-left: 3px;
+}
+
+
+tr:hover{
+	background: #e5e5e5;
+}
