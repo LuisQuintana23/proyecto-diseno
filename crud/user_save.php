@@ -6,7 +6,7 @@ include("db.php");
 if (isset($_POST["btn_guardar"])){
     $nombre = $_POST["nombre"];
     $apellido = $_POST["apellido"];
-    $usuario = $_POST["nombre_usuario"];
+    $usuario = $_POST["usuario"];
     $direccion = $_POST["direccion"];
     $correo = $_POST["correo"];
     $contra = $_POST["contrasena"];
@@ -30,7 +30,6 @@ if (isset($_POST["btn_guardar"])){
 
 
     header("Location: crud.php");
-
 
 }
 

@@ -18,11 +18,7 @@
             </div>
             <div class="collapse navbar-collapse mt-2 me-5" id="menu">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-8">
-                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="signup.html">Registrarse</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="login.html">Iniciar Sesion</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="acerca.html">Acerca de</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../../index.html">Salir</a></li>
                 </ul>
             </div>
         </nav>

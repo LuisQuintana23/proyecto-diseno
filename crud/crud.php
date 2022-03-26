@@ -6,7 +6,7 @@
 
 <div class="container p-3">
     <div class="row">
-    <div class="col-md-4">
+    <div class="col-12 col-xl-4">
 
         <?php if(isset($_SESSION['message'])){ ?>
             <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
@@ -54,19 +54,20 @@
                 </div>
 
                 <div class="form-group mb-2">
+                    <!--Solo permitira que se ingrese A o U-->
                     <input type="text" class="form-control" name="tipo"
-                    placeholder="Tipo" required>
+                    placeholder="Tipo (A o U)" required pattern="A|U">
                 </div>
 
-                <input type="submit" class="btn btn-success btn-block mb-2"
+                <input type="submit" class="btn btn-success w-100"
                 name="btn_guardar" value="Guardar">
 
             </form>
         </div>
 
     </div>
-    <div class="col-md-8">
-            <table class="table table-bordered">
+    <div class="col-12 col-xl-8">
+            <table class="table table-bordered text-center">
                 <thead>
 
                     <tr>
@@ -96,12 +97,12 @@
                                 <td><?php echo $fila['correo']?></td>
                                 <td><?php echo $fila['contrasena']?></td>
                                 <td><?php echo $fila['tipo']?></td>
-                                <td>
+                                <td class="d-flex flex-row">
                                     <a href="user_edit.php?id_usuario=<?php echo $fila['id_usuario']?>">
-                                        <i class="fa fa-pencil-square-o btn btn-warning"></i> 
+                                        <i class="fa fa-pencil-square-o btn btn-warning btn_accion" title="Editar"></i> 
                                     </a>
                                     <a href="user_delete.php?id_usuario=<?php echo $fila['id_usuario']?>">
-                                        <i class="fa fa-trash btn btn-danger"></i>
+                                        <i class="fa fa-trash btn btn-danger btn_accion" title="Eliminar"></i>
                                     </a>
                                 </td>
                             </tr>                            

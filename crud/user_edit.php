@@ -1,4 +1,5 @@
 <?php
+    //mostrara un nuevo formulario y tambien recibira los datos
     include("db.php");
 
     if(isset($_GET['id_usuario'])){
@@ -14,11 +15,33 @@
             $usuario = $fila["nombre_usuario"];
             $direccion = $fila["direccion"];
             $correo = $fila["correo"];
-            $contra = $fila["contrasena"];
+            $contra_original = $fila["contrasena"];//contra 2 ya que nos servira si no se quiere cambiar la contrasena
             $tipo = $fila["tipo"];
         }
 
 
+    }
+
+    if (isset($_POST['btn_update'])){//cuando se presiona el boton de actualizar se ejecuta
+        $id = $_GET['id_usuario'];
+        $nombre = $_POST["nombre"];
+        $apellido = $_POST["apellido"];
+        $usuario = $_POST["usuario"];
+        $direccion = $_POST["direccion"];
+        $correo = $_POST["correo"];
+        $contra = $_POST["contrasena"];
+        $tipo = $_POST["tipo"];
+        
+        if($contra == ""){//verifica si el campo esta vacio
+            //no se actualiza contrasena
+            $query_update = "UPDATE usuario SET nombre='$nombre', apellido='$apellido', nombre_usuario='$usuario', direccion='$direccion', correo='$correo', tipo='$tipo' WHERE id_usuario = '$id'";
+        } else{
+            //se actualiza contrasena y se cifra
+            $query_update = "UPDATE usuario SET nombre='$nombre', apellido='$apellido', nombre_usuario='$usuario', direccion='$direccion', correo='$correo', contrasena=MD5('$contra'), tipo='$tipo' WHERE id_usuario = '$id'";
+        }
+
+        mysqli_query($conexion, $query_update);
+        header("Location: crud.php");
     }
 
 ?>
@@ -29,7 +52,8 @@
     <div class="row">
         <div class="col-md-4 mx-auto">
             <div class="card card-body">
-                <form action="">
+                <!-- Se llama a si mismo ya que crear el formulario y tambien cambia datos -->
+                <form action="user_edit.php?id_usuario=<?php echo $_GET['id_usuario']; ?>" method="POST">
                     <div class="form-group mb-2">
                         <input type="text" value="<?php echo $nombre; ?>" class="form-control" name="nombre"
                         placeholder="Nombre" autofocus required>
@@ -56,8 +80,8 @@
                     </div>
 
                     <div class="form-group mb-2">
-                        <input type="password"  value="<?php echo $contra; ?>" class="form-control" name="contrasena"
-                        placeholder="Contraseña" required minlength=8>
+                        <input type="password" class="form-control" name="contrasena"
+                        placeholder="Contraseña (Opcional)">
                     </div>
 
                     <div class="form-group mb-2">
