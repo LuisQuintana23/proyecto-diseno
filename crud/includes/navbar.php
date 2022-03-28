@@ -3,7 +3,7 @@
     <header class="row">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-tabs">
             <div class="container">
-                <a href="index.html" class="navbar-brand logo_link"><h2>ZEDD</h2></a>
+                <a href="../../index.html" class="navbar-brand logo_link"><h2>ZEDD</h2></a>
                 <button
                 class="navbar-toggler" 
                 type="button"
