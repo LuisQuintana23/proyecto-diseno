@@ -4,16 +4,16 @@
     $username = "refugio"; 
     $password = "vivaAMLO777$$$";
     $usuario = $_POST['usuario'];
-    $contra = $_POST['contrasenia'];
+    $contra = md5($_POST['contrasenia']);
     try { 
         $db = new PDO("mysql:host={$host};dbname={$dbname}", $username, $password); 
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $consulta== $db->query("SELECT * from usuario where nombre_usuario='$usuario' and contrasena=md5($contra)");
+        $consulta= $db->query("SELECT * FROM usuario WHERE nombre_usuario='$usuario' AND contrasena='$contra'");
         $aux=$consulta->fetch();
-        if($consulta){
-            header("location:index.html")
+        if($aux){
+            header("location:index.html");
         }else{
-            echo ("Usuario no encontrado");
+            echo "<script>alert('No se pudo acceder al sistema');window.history.go(-1);</script>";
         }
     }catch (PDOException $exception){ 
         die("Connection error: " . $exception->getMessage()); 
