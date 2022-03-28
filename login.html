@@ -46,12 +46,11 @@
 
     <section class="main">
         <article>
-            <form action="" class="iniciar_sesion">
-                <div><input class="input" type="username" placeholder="Usuario" required=""></div>
-                <div><input class="input" type="password" minlength="8" placeholder="Contraseña" required=""></div>
-                <a href="index.html"><button type="submit" class="input item">Iniciar Sesion</button></a>
+            <form action="config.php" class="iniciar_sesion" method="post">
+                <div><input class="input" type="username" name='usuario' placeholder="Usuario" required=""></div>
+                <div><input class="input" type="password" minlength="8" name="contrasenia" placeholder="Contraseña" required=""></div>
+                <input type="submit" class="input item" value="Iniciar sesion">
             </form>
-            
         </article>
     </section>
 
@@ -77,6 +76,6 @@
     </footer>
 
 </div>
-<script type="text/javascript" src="bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script> 
+<script type="text/javascript" src="bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
