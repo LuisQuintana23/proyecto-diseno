@@ -44,48 +44,39 @@
 
     <section class="main">
         <article class="iniciar_sesion">
-            <form class="opcion" name="data">
+            <form action="contacto.php" method="post" class="opcion" name="data">
                 <section class="grid">
-                <input class="input" type="text" placeholder="Nombre" required="" id="Nombre">
-                <input class="input" type="text" placeholder="Apellido" required="" id="Apellido">
-                <input class="input" type="email" placeholder="Correo" required="" id="Correo">
+                <input name="nombre" class="input" type="text" placeholder="Nombre" required="" >
+                <input name="apellido" class="input" type="text" placeholder="Apellido" required="">
+                <input name="correo" class="input" type="email" placeholder="Correo" required="" >
                 </section>
                 <p>Motivo de contacto</p>
                 <div>
-                  <input type="radio" id="c1"
-                   name="motivo" value="Reportar error">
+                  <input type="radio" name="motivo" value="R">
                   <label for="c1">Reportar error</label>
-                  <input type="radio" id="c2"
-                   name="motivo" value="sugerencias">
+                  <input type="radio" name="motivo" value="S">
                   <label for="c2">Sugerencias</label>
-                  <input type="radio" id="c3"
-                   name="motivo" value="Agradecimientos">
+                  <input type="radio" name="motivo" value="A">
                   <label for="c3">Agredecimientos</label>
-                  <input type="radio" id="c4"
-                   name="motivo" value="Contacto Laboral">
+                  <input type="radio" name="motivo" value="C">
                   <label for="c4">Contacto Laboral</label>
                 </div>
                 <br>
                 <p>¿Cómo te enteraste de esta página?</p>
                 <div>
-                  <input type="radio" id="c5"
-                   name="modo" value="Reportar error">
+                  <input type="radio" name="modo" value="R">
                   <label for="c5">Recomendacion</label>
-                  <input type="radio" id="c6"
-                   name="modo" value="sugerencias">
+                  <input type="radio" name="modo" value="B">
                   <label for="contactChoice6">Búsqueda web</label>
-                  <input type="radio" id="c7"
-                   name="modo" value="Agradecimientos">
+                  <input type="radio" name="modo" value="F">
                   <label for="c7">Facebook</label>
-                  <input type="radio" id="c8"
-                   name="modo" value="Contacto Laboral">
+                  <input type="radio" name="modo" value="P">
                   <label for="c8">Publicidad</label>
                 </div>
                 <br><p>Comentarios</p>
-                <textarea id="coment" class="comentario" rows="10" cols="40"></textarea>
-              </form>
-            
-            <div><input class="input item" type="submit" value="Enviar" onclick="datos()"></div>
+                <textarea name="coment" class="comentario" rows="10" cols="40"></textarea>
+                <div><input class="input item" type="submit" value="Enviar"></div>
+            </form>
         </article>
     </section>
 
