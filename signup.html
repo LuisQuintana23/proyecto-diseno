@@ -46,15 +46,15 @@
 
     <section class="main">
         <article class="iniciar_sesion">
-            <form action="" class="grid">
-                    <input class="input" type="text" placeholder="Nombre" required="">
-                    <input class="input" type="text" placeholder="Apellido" required="">
-                    <input class="input" type="username" placeholder="Usuario" required="">
-                    <input class="input" type="text" placeholder="Dirección" required="">
-                    <input class="input" type="email" placeholder="Correo" required="">
-                    <input class="input" type="password" minlength="8" placeholder="Contraseña" required="">        
+            <form action="registro.php" class="grid" method="post">
+                    <input class="input" name="nombre" type="text" placeholder="Nombre" required="">
+                    <input class="input" name="apellido" type="text" placeholder="Apellido" required="">
+                    <input class="input" name="usuario" type="username" placeholder="Usuario" required="">
+                    <input class="input" name="direccion" type="text" placeholder="Dirección" required="">
+                    <input class="input" name="correo" type="email" placeholder="Correo" required="">
+                    <input class="input" name="contrasena" type="password" minlength="8" placeholder="Contraseña" required="">        
+                    <input type="submit" class="input item" value="Registrarse">
             </form>
-            <a href="index.html"><button type="submit" class="input item">Registrarse</button></a>
         </article>
     </section>
 
