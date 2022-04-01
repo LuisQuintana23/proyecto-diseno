@@ -2,7 +2,7 @@
     $host = "142.93.184.138"; 
     $dbname = "proyecto_web"; 
     $username = "refugio"; 
-    $password = "vivaAMLO777$$$";
+    $password = "metroBUS$$$3232";
     $usuario = $_POST['usuario'];
     $contra = md5($_POST['contrasenia']);
     try { 
