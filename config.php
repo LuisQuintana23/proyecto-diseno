@@ -11,10 +11,10 @@
         $consulta= $db->query("SELECT * FROM usuario WHERE nombre_usuario='$usuario' AND contrasena='$contra'");
         $aux=$consulta->fetch();
         if($aux){
-            if($aux){
-                header("location:index.html");
+            if($aux['tipo']=='A'){
+                header("location:crud/crud.php");
             }else{
-                echo "<script>alert('No se pudo acceder al sistema');window.history.go(-1);</script>";
+                header("location:index.html");
             }
         }else{
             echo "<script>alert('No se pudo acceder al sistema');window.history.go(-1);</script>";
