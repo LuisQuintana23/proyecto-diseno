@@ -14,7 +14,7 @@
             if($aux['tipo']=='A'){
                 header("location:crud/crud.php");
             }else{
-                header("location:index.html");
+                header("location:acerca.html");
             }
         }else{
             echo "<script>alert('No se pudo acceder al sistema');window.history.go(-1);</script>";
