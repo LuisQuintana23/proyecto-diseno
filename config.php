@@ -11,7 +11,11 @@
         $consulta= $db->query("SELECT * FROM usuario WHERE nombre_usuario='$usuario' AND contrasena='$contra'");
         $aux=$consulta->fetch();
         if($aux){
-            header("location:index.html");
+            if($aux){
+                header("location:index.html");
+            }else{
+                echo "<script>alert('No se pudo acceder al sistema');window.history.go(-1);</script>";
+            }
         }else{
             echo "<script>alert('No se pudo acceder al sistema');window.history.go(-1);</script>";
         }
