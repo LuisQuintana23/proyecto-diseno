@@ -1,0 +1,22 @@
+.login_container{
+    max-width: 400px;
+    padding: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #eeeeee;
+}
+
+.titulo_formulario{
+    font-size: 30px;
+}
+
+.boton_ingresar{
+    background:  #333333;
+    color:white;
+}
+
+.boton_ingresar:hover{
+    transition: all ease 0.3s;
+    background: #bfbfbf;
+    color: black;
+}
